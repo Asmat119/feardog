@@ -15,12 +15,12 @@
         android:layout_marginTop="12dp"
         android:gravity="center"
         >
-        <!--<com.google.android.material.divider.MaterialDivider
+        <com.google.android.material.divider.MaterialDivider
             android:layout_width="2dp"
             android:layout_height="10dp"
             android:layout_marginHorizontal="12dp"
             app:dividerColor="@color/white"
-            />-->
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

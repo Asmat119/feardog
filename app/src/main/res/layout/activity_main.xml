@@ -45,7 +45,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         />
-   <!-- <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -89,7 +89,7 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             />
-     &lt;!&ndash;  <LinearLayout
+       <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -124,10 +124,10 @@
                 android:backgroundTint="#29FFFFFF"
                 android:drawableLeft="@drawable/share___small"
                 />
-        </LinearLayout>&ndash;&gt;
+        </LinearLayout>
 
 
-    </LinearLayout>-->
+    </LinearLayout>
 
 
     </LinearLayout>
