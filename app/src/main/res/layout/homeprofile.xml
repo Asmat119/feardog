@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/video1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        >
+        <!--<com.google.android.material.divider.MaterialDivider
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginHorizontal="12dp"
+            app:dividerColor="@color/white"
+            />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Private"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:drawableStart="@drawable/lock___2"
+            android:background="@color/black"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/regular1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="petlover"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Another day, another beach. I want to leave like this forever #travel #nature #ocean"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#29FFFFFF"
+            android:text="Kinabeats–Can We Kiss Forever"
+            android:drawableLeft="@drawable/cd___small"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:text="0"
+            app:cornerRadius="10dp"
+            app:backgroundTint="#FF5B71"
+            android:drawableLeft="@drawable/heart___small"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#29FFFFFF"
+            android:drawableLeft="@drawable/comments___small"
+            android:minWidth="32dp"
+            android:text="0"
+            tools:ignore="TouchTargetSizeCheck" />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#29FFFFFF"
+            android:drawableLeft="@drawable/share___small"
+            />
+    </LinearLayout>
+</LinearLayout>

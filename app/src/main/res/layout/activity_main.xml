@@ -1,19 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/video"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello this is my branch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="12dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:gravity="center"
+>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+           android:gravity="center"
+        />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginHorizontal="12dp"
+            app:dividerColor="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For You"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/regular"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="travelguru"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/check___circle"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow"
+                app:cornerRadius="100dp"
+                android:textSize="10sp"
+                android:backgroundTint="#FF5B71"
+                android:textColor="@color/white"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Another day, another beach. I want to leave like this forever #travel #nature #ocean"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+     &lt;!&ndash;  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#29FFFFFF"
+                android:text="Kinabeats–Can We Kiss Forever"
+                android:drawableLeft="@drawable/cd___small"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:text="999k"
+                app:cornerRadius="10dp"
+                app:backgroundTint="#FF5B71"
+                android:drawableLeft="@drawable/heart___small"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#29FFFFFF"
+                android:text="999k"
+                android:drawableLeft="@drawable/comments___small"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#29FFFFFF"
+                android:drawableLeft="@drawable/share___small"
+                />
+        </LinearLayout>&ndash;&gt;
+
+
+    </LinearLayout>-->
+
+
+    </LinearLayout>
