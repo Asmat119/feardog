@@ -128,5 +128,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rvLive"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:strokeWidth="1dp"
+            android:id="@+id/cvHash"
+            app:strokeColor="#E8EAED"
+            app:cardElevation="0dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="100dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hash"
+                android:layout_margin="18dp"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="travel"
+            android:layout_toRightOf="@id/cvHash"
+            android:id="@+id/tvTravel"
+            android:layout_marginStart="12dp"
+            android:textSize="15sp"
+            android:textColor="#2B323B"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/cvHash"
+            android:layout_marginStart="12dp"
+            android:layout_below="@id/tvTravel"
+            android:layout_height="wrap_content"
+            android:text="2.4M ・ Trending Hashtag"
+            android:textSize="12sp"
+            android:textColor="#A4ADB7"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/union_r"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@android:color/transparent"
+            />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvtravel"/>
 
 </LinearLayout>
