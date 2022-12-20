@@ -35,17 +35,6 @@ public class BottomSheetActivity extends AppCompatActivity {
 
          setData();
          setAdapter();
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private void setAdapter() {
@@ -87,5 +76,6 @@ public class BottomSheetActivity extends AppCompatActivity {
         actionItem.add(new ActionModel(R.drawable.grid___03,"Duet"));
         actionItem.add(new ActionModel(R.drawable.bookmark,"Bookmark"));
     }
+
 }
 
