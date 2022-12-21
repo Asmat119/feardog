@@ -1,6 +1,7 @@
 package adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,12 @@ public class TrendingLiveAdapter extends RecyclerView.Adapter<TrendingLiveAdapte
         holder.binding.ivBack.setImageResource(list.get(position).getIvbak());
         holder.binding.ivAva.setImageResource(list.get(position).getIvAva());
         holder.binding.tvViewrs.setText(list.get(position).getTvViewrs());
+        if(position==0){
+            holder.binding.cvAdd.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.binding.cvAdd.setVisibility(View.GONE);
+        }
     }
 
     @Override

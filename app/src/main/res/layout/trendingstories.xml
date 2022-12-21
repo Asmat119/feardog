@@ -13,7 +13,7 @@
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
         android:layout_height="wrap_content">
-<androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView
     android:layout_width="88dp"
     android:id="@+id/cvCreate"
     android:visibility="gone"
