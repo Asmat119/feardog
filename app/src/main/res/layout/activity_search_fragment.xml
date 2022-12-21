@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="searchtab.SearchTabActivity">
+    tools:context="searchtab.SearchFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.Feardog.AppBarOverlay">
 
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
-            app:tabIndicatorColor="#FF5B71"
-            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
-            app:tabSelectedTextColor="#FF5B71"
             android:layout_width="match_parent"
+            app:tabSelectedTextColor="@color/red"
+            app:tabIndicatorFullWidth="false"
+            app:tabTextColor="#6C7989"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+
+            app:tabIndicatorColor="@color/red"
             android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
