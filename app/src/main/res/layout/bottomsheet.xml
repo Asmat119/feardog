@@ -90,7 +90,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/wade"
+                        android:src="@drawable/avatar_man"
                         android:scaleType="centerCrop"
                         />
                 </com.google.android.material.card.MaterialCardView>
