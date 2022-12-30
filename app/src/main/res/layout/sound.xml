@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginVertical="8dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:strokeWidth="1dp"
+            android:id="@+id/cvSound"
+            app:strokeColor="#E8EAED"
+            app:cardElevation="0dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="100dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/playback"
+                android:id="@+id/ivBk"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/play"
+                    android:layout_margin="18dp"
+                    />
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Travel Time"
+            android:layout_toRightOf="@id/cvSound"
+            android:id="@+id/tvSound"
+            android:layout_marginStart="16dp"
+            android:textSize="15sp"
+            android:textColor="#2B323B"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/cvSound"
+            android:id="@+id/tvViews"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/tvSound"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Vivamus Lectus"
+            android:textSize="15sp"
+            android:textColor="#A4ADB7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/union_r"
+            android:layout_centerVertical="true"
+            android:drawablePadding="22dp"
+            android:text="24.6 M"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@android:color/transparent"
+            />
+    </RelativeLayout>
+</LinearLayout>

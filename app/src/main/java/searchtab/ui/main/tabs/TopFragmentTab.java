@@ -17,9 +17,13 @@ import com.example.feardog.databinding.FragmentTopTabBinding;
 import java.util.ArrayList;
 import java.util.List;
 
+import adapter.AccountAdapter;
 import adapter.HashtagAdpater;
+import adapter.SoundAdapter;
 import adapter.TrendingTravelAdapter;
+import model.AccountModel;
 import model.HashtagDataModel;
+import model.SoundModel;
 import model.TrendingTravelModel;
 
 public class TopFragmentTab extends Fragment {
@@ -31,8 +35,13 @@ public class TopFragmentTab extends Fragment {
     TrendingTravelAdapter travelAdapter;
     ArrayList<TrendingTravelModel> tlist;
 
-    /// Videos array and Adapter
+    AccountAdapter accountAdapter;
+    ArrayList<AccountModel> alist;
 
+
+    SoundAdapter soundAdapter;
+    ArrayList<SoundModel> slist;
+    /// Videos array and Adapter
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,6 +49,8 @@ public class TopFragmentTab extends Fragment {
         binding = FragmentTopTabBinding.inflate(inflater,container,false);
         list = new ArrayList<>();
         tlist= new ArrayList<>();
+        alist= new ArrayList<>();
+        slist = new ArrayList<>();
 
         init();
 
@@ -52,6 +63,17 @@ public class TopFragmentTab extends Fragment {
         binding.rvVideos.setLayoutManager(new GridLayoutManager(getContext(),3,LinearLayoutManager.VERTICAL,false));
         binding.rvVideos.setHasFixedSize(true);
         binding.rvVideos.setAdapter(travelAdapter);
+
+        accountAdapter = new AccountAdapter(alist);
+        binding.rvAccount.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        binding.rvAccount.setHasFixedSize(true);
+        binding.rvAccount.setAdapter(accountAdapter);
+
+
+        soundAdapter = new SoundAdapter(slist,getContext());
+        binding.rvSound.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager. VERTICAL,false));
+        binding.rvSound.setHasFixedSize(true);
+        binding.rvSound.setAdapter(soundAdapter);
 
         /// Videos Reycerview  should be set here
 
@@ -69,6 +91,18 @@ public class TopFragmentTab extends Fragment {
         tlist.add(new TrendingTravelModel(R.drawable.cover, "12.3k "));
         tlist.add(new TrendingTravelModel(R.drawable.cover_2_, "17.3k "));
         tlist.add(new TrendingTravelModel(R.drawable.cover, "12.3k "));
+
+
+        alist.add(new AccountModel(R.drawable.ann, "Annette Black", "@unstylishhelper"));
+        alist.add(new AccountModel(R.drawable.james, "Jerome Bell", "@catchablesadly"));
+        alist.add(new AccountModel(R.drawable.jenny, "Jenny Fox", "@calamarislider"));
+
+        slist.add(new SoundModel(R.drawable.playback, "Travel Time", "Vivamus Lectus"));
+        slist.add(new SoundModel(R.drawable.plazback2, "Travel Story", "Orci Eget"));
+
+
+
+
         /// Videos list should be set here
 
 
