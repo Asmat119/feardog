@@ -3,6 +3,7 @@ package searchtab.ui.main.tabs;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,7 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.HashtagAdpater;
+import adapter.TrendingTravelAdapter;
 import model.HashtagDataModel;
+import model.TrendingTravelModel;
 
 public class TopFragmentTab extends Fragment {
 
@@ -25,6 +28,8 @@ public class TopFragmentTab extends Fragment {
 
     ArrayList<HashtagDataModel> list;
     HashtagAdpater adpater;
+    TrendingTravelAdapter travelAdapter;
+    ArrayList<TrendingTravelModel> tlist;
 
     /// Videos array and Adapter
 
@@ -34,6 +39,7 @@ public class TopFragmentTab extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentTopTabBinding.inflate(inflater,container,false);
         list = new ArrayList<>();
+        tlist= new ArrayList<>();
 
         init();
 
@@ -42,10 +48,12 @@ public class TopFragmentTab extends Fragment {
         binding.rvHashtags.setHasFixedSize(true);
         binding.rvHashtags.setAdapter(adpater);
 
+        travelAdapter = new TrendingTravelAdapter(tlist);
+        binding.rvVideos.setLayoutManager(new GridLayoutManager(getContext(),3));
+        binding.rvVideos.setHasFixedSize(true);
+        binding.rvVideos.setAdapter(travelAdapter);
+
         /// Videos Reycerview  should be set here
-
-
-
 
         return binding.getRoot();
     }
@@ -55,6 +63,12 @@ public class TopFragmentTab extends Fragment {
         list.add(new HashtagDataModel("traveldiaries","2.35M Videos"));
         list.add(new HashtagDataModel("travellife","2.19M Videos"));
 
+        tlist.add(new TrendingTravelModel(R.drawable.cover_2_, "12.3k "));
+        tlist.add(new TrendingTravelModel(R.drawable.cover, "16.3k "));
+        tlist.add(new TrendingTravelModel(R.drawable.cover_2_, "14.3k "));
+        tlist.add(new TrendingTravelModel(R.drawable.cover, "12.3k "));
+        tlist.add(new TrendingTravelModel(R.drawable.cover_2_, "17.3k "));
+        tlist.add(new TrendingTravelModel(R.drawable.cover, "12.3k "));
         /// Videos list should be set here
 
 
