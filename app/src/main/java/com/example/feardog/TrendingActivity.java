@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.feardog.databinding.ActivityTrendingBinding;
-import com.example.feardog.databinding.TrendingstoriesBinding;
 
 import java.util.ArrayList;
 

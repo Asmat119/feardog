@@ -36,7 +36,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="searchtab.SearchTabActivity"
+            android:name="searchtab.SearchFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
