@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Feardog"
         tools:targetApi="31">
         <activity
+            android:name=".NestedActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TrendingActivity"
             android:exported="false"
             android:label="@string/title_activity_search_tab"
@@ -36,7 +43,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="searchtab.SearchFragment"
+            android:name="searchtab.CommentFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

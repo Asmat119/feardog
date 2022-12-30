@@ -5,195 +5,159 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
     tools:context=".MainActivity"
     android:layout_marginHorizontal="16dp">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="999,164 Comments"
-            android:layout_centerVertical="true"
-            android:textSize="15sp"
-            android:textColor="#0E141B"
-            android:textStyle="bold"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/cross"
-            android:backgroundTint="@android:color/transparent"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
     <LinearLayout
     android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_toStartOf="@id/layoutLike"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:elevation="0dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="100dp"
-                app:cardElevation="0dp"
-                app:strokeColor="#FF5B71"
-                app:strokeWidth="2dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/regular" />
-            </com.google.android.material.card.MaterialCardView>
-            
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="8dp"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="travelguru"
-                        android:textColor="#0E141B"
-                        android:textSize="13sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:text="Creator"
-                        android:textColor="#FF5B71"
-                        android:textSize="13sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:text="2w"
-                        android:textColor="#6C7989"
-                        android:textSize="13sp" />
-                </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="In integer suspendisse ridiculus vulputate tortor egestas 😍"
-                    android:textColor="#2B323B"
-                    android:textSize="14sp" />
-                <iammert.com.expandablelib.ExpandableLayout
-                    android:id="@+id/el"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:parentLayout="@layout/layout_parent"
-                    app:childLayout="@layout/layout_child"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:id="@+id/layoutLike"
-            android:layout_alignParentRight="true"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="center"
-                android:src="@drawable/heart" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1024"
-                android:textColor="#A4ADB7"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="👍  👎  😍  🍷  😮  🎉  🔥  👏  💯  😥"
-                android:textSize="20sp" />
-        </LinearLayout>
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:id="@+id/etMessage"
+                android:layout_toStartOf="@id/layoutLike"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/btnAt"
-                android:hint="Message..."
-                android:textColor="#6C7989"
-                android:textSize="14sp"
-                app:boxBackgroundColor="@color/white"
-                app:boxCornerRadiusBottomEnd="100dp"
-                app:boxCornerRadiusBottomStart="100dp"
-                app:boxCornerRadiusTopEnd="100dp"
-                app:boxCornerRadiusTopStart="100dp"
-                app:endIconDrawable="@drawable/smile"
-                app:endIconMode="custom"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@null" />
-            </com.google.android.material.textfield.TextInputLayout>
-            <ImageButton
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:elevation="0dp"
+                    android:id="@+id/cvBorder"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#FF5B71"
+                    app:strokeWidth="2.3dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:padding="2dp"
+                        android:id="@+id/imAvatar"
+                        android:src="@drawable/regular" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="travelguru"
+                            android:id="@+id/tvUserName"
+                            android:textColor="#0E141B"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="Creator"
+                            android:id="@+id/tvCreator"
+                            android:textColor="#FF5B71"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="2w"
+                            android:id="@+id/tvDay"
+                            android:textColor="#6C7989"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="In integer suspendisse ridiculus vulputate tortor egestas 😍"
+                        android:textColor="#2B323B"
+                        android:id="@+id/tvMessage"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:src="@drawable/at_sign"
-                android:padding="0dp"
-                android:id="@+id/btnAt"
-                android:backgroundTint="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/layoutLike"
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                />
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tvIconHeart"
+                    android:layout_gravity="center"
+                    android:src="@drawable/heart" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1024"
+                    android:textColor="#A4ADB7"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
         </RelativeLayout>
+
+
+
+
+
+
+
+
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/expanded_layout"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="52dp"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/childRecyclerView"
+            />
+
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="52dp"
+        android:id="@+id/expandeLayout"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:text="View all replies (18)"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/tvView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>

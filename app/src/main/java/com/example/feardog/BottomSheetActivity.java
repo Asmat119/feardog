@@ -69,7 +69,7 @@ public class BottomSheetActivity extends AppCompatActivity {
         socialItem.add(new SocialModel(ContextCompat.getColor(this,R.color.fb_color),R.drawable.fb,"Viber"));
         socialItem.add(new SocialModel(ContextCompat.getColor(this,R.color.color_viber),R.drawable.viber,"Facebook"));
         socialItem.add(new SocialModel(ContextCompat.getColor(this,R.color.sms_color),R.drawable.sms,"Sms"));
-        socialItem.add(new SocialModel(ContextCompat.getColor(this,R.color.twitter_color),R.drawable.twitter2,"Twitter"));
+        socialItem.add(new SocialModel(ContextCompat.getColor(this,R.color.twitter_color),R.drawable.sms,"Twitter"));
         actionItem.add(new ActionModel(R.drawable.flag,"Report"));
         actionItem.add(new ActionModel(R.drawable.slash,"Not Interested"));
         actionItem.add(new ActionModel(R.drawable.impo,"Save Video"));
