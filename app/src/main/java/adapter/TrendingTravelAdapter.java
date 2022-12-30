@@ -31,8 +31,9 @@ public class TrendingTravelAdapter extends RecyclerView.Adapter<TrendingTravelAd
 
     @Override
     public void onBindViewHolder(@NonNull TrendingTravelAdapter.ViewHolder holder, int position) {
-        holder.binding.ivtravel.setImageResource(list.get(position).getIvtravel());
-        holder.binding.tvtravel.setText(list.get(position).getTvtravel());
+        TrendingTravelModel model= list.get(position);
+        holder.binding.ivtravel.setImageResource(model.getIvtravel());
+        holder.binding.tvtravel.setText(model.getTvtravel());
     }
 
     @Override

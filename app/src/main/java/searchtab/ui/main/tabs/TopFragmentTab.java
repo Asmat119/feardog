@@ -49,7 +49,7 @@ public class TopFragmentTab extends Fragment {
         binding.rvHashtags.setAdapter(adpater);
 
         travelAdapter = new TrendingTravelAdapter(tlist);
-        binding.rvVideos.setLayoutManager(new GridLayoutManager(getContext(),3));
+        binding.rvVideos.setLayoutManager(new GridLayoutManager(getContext(),3,LinearLayoutManager.VERTICAL,false));
         binding.rvVideos.setHasFixedSize(true);
         binding.rvVideos.setAdapter(travelAdapter);
 
