@@ -5,12 +5,10 @@
     tools:context="searchtab.ui.main.tabs.HashTabFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="HashTag" />
+        android:id="@+id/rvHashtag"/>
+
 
 </RelativeLayout>

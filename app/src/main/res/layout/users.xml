@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:elevation="0dp"
+        android:id="@+id/cvBorder"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="100dp"
+        android:layout_gravity="center"
+        app:cardElevation="0dp"
+        app:strokeColor="#FF5B71"
+        app:strokeWidth="2.3dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:padding="2dp"
+            android:id="@+id/imAvatar"
+            android:src="@drawable/james" />
+    </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jerome Bell"
+        android:id="@+id/tvName"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/imAvatar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:textColor="#2B323B"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tvUserName"
+        android:layout_height="wrap_content"
+        android:text="catchablesadly"
+        android:textSize="14sp"
+        android:textColor="#6C7989"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="2dp"
+
+        />
+    </LinearLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:paddingVertical="7dp"
+        android:text="Follow"
+        app:cornerRadius="100dp"
+        android:textSize="13sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:backgroundTint="#FF5B71"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+</LinearLayout>
