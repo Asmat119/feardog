@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
-                if (navDestination.getId()==R.id.QRCodeFragment || navDestination.getId()==R.id.scanQRCodeFragment  || navDestination.getId()==R.id.reposrtFragment){
+                if (navDestination.getId()==R.id.QRCodeFragment || navDestination.getId()==R.id.scanQRCodeFragment
+                        || navDestination.getId()==R.id.reposrtFragment || navDestination.getId()==R.id.goLivekFragment ){
                     binding.navView.setVisibility(View.GONE);
                 }
                 else {

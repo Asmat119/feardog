@@ -113,7 +113,16 @@
         android:id="@+id/liveFragment"
         android:name="com.example.feardog.ui.live.LiveFragment"
         android:label="fragment_live"
-        tools:layout="@layout/fragment_live" />
+        tools:layout="@layout/fragment_live" >
+        <action
+            android:id="@+id/action_liveFragment_to_goLivekFragment"
+            app:destination="@id/goLivekFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goLivekFragment"
+        android:name="com.example.feardog.ui.live.GoLivekFragment"
+        android:label="fragment_go_livek"
+        tools:layout="@layout/fragment_go_livek" />
 
 
 </navigation>
