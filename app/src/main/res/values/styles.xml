@@ -17,6 +17,7 @@
 
     </style>
 
+
     <style name="Theme.Feardog.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="MyTabLayoutTextAppearance" parent="Widget.Design.TabLayout">
         <item name="android:textSize">14sp</item>
