@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.example.feardog.R;
 import com.example.feardog.databinding.CommentsBinding;
-import com.example.feardog.databinding.ParentCommentLayoutBinding;
+import com.example.feardog.models.BottomCommentDataModel;
+import com.example.feardog.models.CommentDataModel;
 
 import java.util.List;
 
@@ -36,13 +37,13 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewMode
 
     @NonNull
     @Override
-    public CommentAdapter.ViewModel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewModel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = CommentsBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new ViewModel(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CommentAdapter.ViewModel holder, int position) {
+    public void onBindViewHolder(@NonNull ViewModel holder, int position) {
         BottomCommentDataModel model = itemList.get(position);
 
         holder.binding.imAvatar.setImageResource(model.getIvAvatar());
@@ -53,7 +54,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewMode
         String text = "<font color=#000000>"+holder.binding.tvMessage.getText()+"</font> <font color=#6C7989>Reply</font>";
         holder.binding.tvMessage.setText(Html.fromHtml(text));
 
-        boolean isExpandable = model.isExpandable;
+        boolean isExpandable = model.isExpandable();
 
         holder.binding.tvIconHeart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +72,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewMode
             }
         });
 
-        if(model.isCreator){
+        if(model.isCreator()){
             holder.binding.cvBorder.setStrokeWidth(2);
             holder.binding.tvCreator.setVisibility(View.VISIBLE);
         }

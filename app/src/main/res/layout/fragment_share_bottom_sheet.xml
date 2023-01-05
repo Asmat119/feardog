@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context="utils.ShareBottomSheet">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share with friend"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="17dp"
+        android:layout_marginHorizontal="12dp"
+        android:id="@+id/rvProfile"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share via app"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:id="@+id/rvSocial"
+        android:layout_marginHorizontal="12dp"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:dividerColor="#F3F5F6"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/rvAction"
+        android:layout_marginBottom="10dp"
+
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:dividerColor="#F3F5F6"
+        android:layout_marginTop="16dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:insetTop="0dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        app:backgroundTint="@null"
+
+        android:insetBottom="0dp"
+        android:padding="14dp"
+        android:paddingVertical="0dp"
+        android:textAllCaps="false"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:layout_height="match_parent"
+
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="@font/inter_semibold"
+
+
+        />
+
+
+
+
+
+</LinearLayout>

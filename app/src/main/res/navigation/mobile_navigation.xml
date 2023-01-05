@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.feardog.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_navigation_home_to_shareBottomSheet"
+            app:destination="@id/shareBottomSheet" />
+        <action
+            android:id="@+id/action_navigation_home_to_commentBottomSheet"
+            app:destination="@id/commentBottomSheet" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.feardog.ui.search.SearchFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_search_to_searchItemFragment"
+            app:destination="@id/searchItemFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_QRCodeFragment"
+            app:destination="@id/QRCodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.example.feardog.ui.Add.AddFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.feardog.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.feardog.ui.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+    <dialog
+        android:id="@+id/commentBottomSheet"
+        android:name="utils.CommentBottomSheet"
+        android:label="fragment_comment_bottom_sheet"
+        tools:layout="@layout/fragment_comment_bottom_sheet" >
+
+    </dialog>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.feardog.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/reposrtFragment"
+        android:name="com.example.feardog.ui.home.ReportFragment"
+        android:label="fragment_reposrt"
+        tools:layout="@layout/fragment_reposrt" />
+    <dialog
+        android:id="@+id/shareBottomSheet"
+        android:name="utils.ShareBottomSheet"
+        android:label="fragment_share_bottom_sheet"
+        tools:layout="@layout/fragment_share_bottom_sheet" >
+        <action
+            android:id="@+id/action_shareBottomSheet_to_QRCodeFragment"
+            app:destination="@id/QRCodeFragment" />
+        <action
+            android:id="@+id/action_shareBottomSheet_to_reposrtFragment"
+            app:destination="@id/reposrtFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/QRCodeFragment"
+        android:name="com.example.feardog.ui.search.QRCodeFragment"
+        android:label="fragment_q_r_code"
+        tools:layout="@layout/fragment_q_r_code" >
+
+        <action
+            android:id="@+id/action_QRCodeFragment_to_scanQRCodeFragment"
+            app:destination="@id/scanQRCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanQRCodeFragment"
+        android:name="com.example.feardog.ui.search.ScanQRCodeFragment"
+        android:label="fragment_scan_qrcode"
+        tools:layout="@layout/fragment_scan_qrcode" />
+    <fragment
+        android:id="@+id/searchItemFragment"
+        android:name="com.example.feardog.ui.search.SearchItemFragment"
+        android:label="fragment_search_item"
+        tools:layout="@layout/fragment_search_item" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchTabFragment"
+        android:name="com.example.feardog.ui.search.SearchTabFragment"
+        android:label="fragment_search_tab2"
+        tools:layout="@layout/fragment_search_tab2" />
+    <fragment
+        android:id="@+id/recentSearchFragment"
+        android:name="com.example.feardog.ui.search.RecentSearchFragment"
+        android:label="fragment_recent_search"
+        tools:layout="@layout/fragment_recent_search" />
+    <fragment
+        android:id="@+id/liveFragment"
+        android:name="com.example.feardog.ui.live.LiveFragment"
+        android:label="fragment_live"
+        tools:layout="@layout/fragment_live" />
+
+
+</navigation>

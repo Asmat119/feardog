@@ -8,10 +8,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.feardog.databinding.TrendingliveBinding;
+import com.example.feardog.databinding.TrendingstoriesBinding;
+import com.example.feardog.models.TrendingLiveModel;
+
 
 import java.util.ArrayList;
 
-import model.TrendingLiveModel;
 
 public class TrendingLiveAdapter extends RecyclerView.Adapter<TrendingLiveAdapter.ViewHolder> {
     TrendingliveBinding binding;
@@ -23,13 +25,13 @@ public class TrendingLiveAdapter extends RecyclerView.Adapter<TrendingLiveAdapte
 
     @NonNull
     @Override
-    public TrendingLiveAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = TrendingliveBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new ViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TrendingLiveAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.binding.ivBack.setImageResource(list.get(position).getIvbak());
         holder.binding.ivAva.setImageResource(list.get(position).getIvAva());
         holder.binding.tvViewrs.setText(list.get(position).getTvViewrs());

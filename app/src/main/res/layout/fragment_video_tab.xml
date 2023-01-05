@@ -2,12 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="searchtab.ui.main.tabs.VideoTabFragment">
+    tools:context=".ui.search.tabs.VideoTabFragment">
 
     <!-- TODO: Update blank fragment layout -->
    <androidx.recyclerview.widget.RecyclerView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginHorizontal="8dp"
+       android:paddingTop="10dp"
        android:id="@+id/rvVtab"/>
 
 </RelativeLayout>

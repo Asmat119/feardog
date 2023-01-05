@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.search.SearchItemFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/white"
+        android:id="@+id/appBar"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginVertical="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/back"
+            android:id="@+id/btnBack"
+            android:layout_alignParentLeft="true"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
+            app:boxCornerRadiusBottomEnd="100dp"
+            app:boxCornerRadiusBottomStart="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@id/btnBack"
+            android:id="@+id/edInput"
+            android:layout_toStartOf="@id/btnScan"
+            android:layout_marginRight="16dp"
+            app:boxCornerRadiusTopStart="100dp"
+            app:boxCornerRadiusTopEnd="100dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#F3F5F6"
+            android:hint="Search anything..."
+            android:textSize="13sp"
+            android:focusedByDefault="true"
+            app:hintEnabled="false"
+            android:focusable="true"
+            app:boxStrokeWidth="0dp"
+            app:hintTextColor="@color/black"
+            android:focusableInTouchMode="true"
+            app:boxStrokeWidthFocused="0dp"
+            android:textColor="#A4ADB7">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:hint="Search anything..."
+                android:background="@null"
+                android:id="@+id/editText"
+                android:focusedByDefault="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:textSize="13sp"
+                android:textCursorDrawable="@drawable/curser"
+                android:paddingVertical="12dp"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/btnScan"
+            android:text="Search"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/red"
+            android:src="@drawable/scan"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+  <ViewFlipper
+      android:layout_width="match_parent"
+      android:id="@+id/viewFlipper"
+      android:layout_height="match_parent">
+
+     <androidx.fragment.app.FragmentContainerView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/recentSearchFragment"
+         android:name="com.example.myapplication.ui.search.RecentSearchFragment"
+         />
+      <androidx.fragment.app.FragmentContainerView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/searchTabFragment"
+          android:name="com.example.myapplication.ui.search.SearchTabFragment"
+          />
+
+  </ViewFlipper>
+
+
+</LinearLayout>

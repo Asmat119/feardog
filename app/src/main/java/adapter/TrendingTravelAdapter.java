@@ -1,7 +1,7 @@
 package adapter;
 
+
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.feardog.databinding.TravelBinding;
+import com.example.feardog.models.TrendingTravelModel;
 
 import java.util.ArrayList;
 
-import model.TrendingTravelModel;
-
+//
 public class TrendingTravelAdapter extends RecyclerView.Adapter<TrendingTravelAdapter.ViewHolder> {
     TravelBinding binding;
     ArrayList<TrendingTravelModel> list;
@@ -24,16 +24,15 @@ public class TrendingTravelAdapter extends RecyclerView.Adapter<TrendingTravelAd
 
     @NonNull
     @Override
-    public TrendingTravelAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = TravelBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new ViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TrendingTravelAdapter.ViewHolder holder, int position) {
-        TrendingTravelModel model= list.get(position);
-        holder.binding.ivtravel.setImageResource(model.getIvtravel());
-        holder.binding.tvtravel.setText(model.getTvtravel());
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.binding.ivtravel.setImageResource(list.get(position).getIvtravel());
+        holder.binding.tvtravel.setText(list.get(position).getTvtravel());
     }
 
     @Override

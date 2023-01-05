@@ -2,17 +2,17 @@ package adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.example.feardog.databinding.SoundBinding;
+import com.example.feardog.models.SoundModel;
+
 import java.util.ArrayList;
 
-import model.AccountModel;
-import model.SoundModel;
 
 public class SoundAdapter extends RecyclerView.Adapter<SoundAdapter.ViewHolder> {
     SoundBinding binding;
@@ -26,9 +26,9 @@ public class SoundAdapter extends RecyclerView.Adapter<SoundAdapter.ViewHolder> 
 
     @NonNull
     @Override
-    public SoundAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = SoundBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
-        return new SoundAdapter.ViewHolder(binding);
+        return new ViewHolder(binding);
     }
 
     @Override

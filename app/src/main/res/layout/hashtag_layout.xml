@@ -8,12 +8,13 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="12dp"
 
+        android:gravity="center_vertical">
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             app:strokeWidth="1dp"
             android:id="@+id/cvHash"
             app:strokeColor="#E8EAED"
@@ -35,6 +36,7 @@
             android:id="@+id/tvTravel"
             android:layout_marginStart="16dp"
             android:textSize="15sp"
+            android:fontFamily="@font/inter_semibold"
             android:textColor="#2B323B"/>
         <TextView
             android:layout_width="wrap_content"

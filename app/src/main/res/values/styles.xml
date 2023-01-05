@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TextStyle" parent="@android:style/TextAppearance">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#aacbb4</item>
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="tabTextColor">@color/light_black</item>
+    </style>
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+
     </style>
 
-    <style name="ButtonTextStyle" parent="@android:style/TextAppearance">
-
-        <item name="android:textColor">#aacbb4</item>
-        <item name="android:marqueeRepeatLimit">marquee_forever</item>
-        <item name="android:ellipsize">marquee</item>
-        <item name="android:scrollHorizontally">true</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:focusableInTouchMode">true</item>
-        <item name="android:focusable">true</item>
-    </style>
+    <style name="Theme.Feardog.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="MyTabLayoutTextAppearance" parent="Widget.Design.TabLayout">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textAllCaps">false</item>
         <item name="tabSelectedTextColor">@color/red</item>
+        <item name="fontFamily">@font/inter_medium</item>
 
         <item name="selectableItemBackground">@color/red</item>
     </style>

@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.feardog.R;
-import com.example.feardog.databinding.CommentsBinding;
 import com.example.feardog.databinding.ParentCommentLayoutBinding;
+import com.example.feardog.models.CommentDataModel;
 
 import java.util.List;
 
@@ -22,20 +22,20 @@ public class NestedCommentAdapter extends RecyclerView.Adapter<NestedCommentAdap
     Context context;
     boolean isClicked =false;
 
-    public NestedCommentAdapter(List<CommentDataModel> itemList,Context context) {
+    public NestedCommentAdapter(List<CommentDataModel> itemList, Context context) {
         this.itemList = itemList;
         this.context=context;
     }
 
     @NonNull
     @Override
-    public NestedCommentAdapter.ViewModel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewModel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = ParentCommentLayoutBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new ViewModel(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NestedCommentAdapter.ViewModel holder, int position) {
+    public void onBindViewHolder(@NonNull ViewModel holder, int position) {
         CommentDataModel model = itemList.get(position);
 
         holder.binding.imAvatar.setImageResource(model.getIvAvatar());
@@ -57,7 +57,7 @@ public class NestedCommentAdapter extends RecyclerView.Adapter<NestedCommentAdap
 
             }
         });
-        if(model.isCreator){
+        if(model.isCreator()){
             holder.binding.cvBorder.setStrokeWidth(2);
             holder.binding.tvCreator.setVisibility(View.VISIBLE);
         }

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+
+    android:orientation="vertical"
+    android:id="@+id/searchFragment"
+android:layout_height="match_parent"
+tools:context=".ui.search.SearchFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="12dp"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
+            app:boxCornerRadiusBottomEnd="100dp"
+            app:boxCornerRadiusBottomStart="100dp"
+            android:id="@+id/edInput"
+            android:layout_toStartOf="@id/btnScan"
+            app:boxCornerRadiusTopStart="100dp"
+            app:boxCornerRadiusTopEnd="100dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#F3F5F6"
+            android:hint="Search anything..."
+            android:textSize="13sp"
+            app:hintEnabled="false"
+            android:focusable="false"
+            android:clickable="true"
+            android:longClickable="false"
+            app:boxStrokeWidth="0dp"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidthFocused="0dp"
+            android:textColor="#A4ADB7">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:hint="Search anything..."
+                android:background="@null"
+                android:id="@+id/editText"
+
+                android:drawableStart="@drawable/search"
+                android:inputType="none"
+                android:focusable="false"
+                android:textSize="13sp"
+                android:drawablePadding="8dp"
+                android:clickable="true"
+                android:longClickable="false"
+                android:textCursorDrawable="@drawable/curser"
+                android:paddingVertical="11dp"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btnScan"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/scan"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="160dp">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="100dp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentBottom="true"
+                app:cardBackgroundColor="#29FFFFFF"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/dot_indicator"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_below="@+id/viewPager"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="24dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trending Stories"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="#2B323B"
+                android:textSize="15sp" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/union_r"
+                android:layout_alignParentRight="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="6dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_height="wrap_content">
+
+            </ImageButton>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/rv"
+
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="24dp"
+
+            android:layout_marginTop="28dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTrending"
+                android:text="Trending Live"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="#2B323B"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@id/tvTrending"
+                android:src="@drawable/ellipse_10"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/union_r"
+                android:layout_centerVertical="true"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="8dp"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@android:color/transparent"
+                />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/rvLive"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="18dp">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:strokeWidth="1dp"
+                android:id="@+id/cvHash"
+                app:strokeColor="#E8EAED"
+                app:cardElevation="0dp"
+                android:elevation="0dp"
+                app:cardCornerRadius="100dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hash"
+                    android:layout_margin="18dp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="travel"
+                android:layout_toRightOf="@id/cvHash"
+                android:id="@+id/tvTravel"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginStart="12dp"
+                android:textSize="15sp"
+                android:textColor="#2B323B"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/cvHash"
+                android:layout_marginStart="12dp"
+                android:layout_below="@id/tvTravel"
+                android:layout_height="wrap_content"
+                android:text="2.4M ・ Trending Hashtag"
+                android:textSize="12sp"
+                android:textColor="#A4ADB7"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/union_r"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="@android:color/transparent"
+                />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="8dp"
+            android:id="@+id/rvtravel"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="72dp"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

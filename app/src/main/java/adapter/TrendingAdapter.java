@@ -9,10 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.feardog.databinding.TrendingstoriesBinding;
-
+import com.example.feardog.models.TrendingStoryModel;
 import java.util.ArrayList;
 
-import model.TrendingStoryModel;
 
 public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.ViewHolder> {
 
@@ -26,13 +25,13 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.ViewHo
 
     @NonNull
     @Override
-    public TrendingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = TrendingstoriesBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new ViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TrendingAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TrendingStoryModel model = item.get(position);
         holder.binding.ivBack.setImageResource(model.getIvBack());
         holder.binding.ivAvatar.setImageResource(model.getIvAvatar());

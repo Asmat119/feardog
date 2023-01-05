@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    android:layout_width="wrap_content"
-    android:elevation="0dp"
-    app:cardElevation="0dp"
-    android:layout_marginVertical="6dp"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_marginHorizontal="4dp">
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/travel"
-            android:scaleType="centerCrop"
-            android:id="@+id/ivtravel"
-            />
+    <androidx.cardview.widget.CardView
+        android:layout_width="127dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="227dp"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/travel"
+        android:id="@+id/ivtravel"
+        android:scaleType="fitXY"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:padding="16dp"
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent"
         android:layout_gravity="bottom"
+        android:orientation="vertical"
         >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/play___small"
             android:drawablePadding="6dp"
             android:text="215.8K"
-            android:layout_marginStart="12dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
             android:textColor="@color/white"
             android:textSize="13sp"
             android:id="@+id/tvtravel"
             />
     </RelativeLayout>
     </androidx.cardview.widget.CardView>
+</LinearLayout>

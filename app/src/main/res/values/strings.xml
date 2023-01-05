@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">feardog</string>
-    <string name="title_activity_search_tab">SearchTabActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">SwipeUp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_search_fragment">SearchFragment</string>
+    <string name="following">Following</string>
+    <string name="for_you">For You</string>
 </resources>
