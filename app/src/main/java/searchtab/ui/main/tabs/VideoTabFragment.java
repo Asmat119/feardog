@@ -35,7 +35,6 @@ public class VideoTabFragment extends Fragment {
         list= new ArrayList<>();
 
 
-
         list.add(new TrendingTravelModel(R.drawable.cover_1_,"2.8k"));
         list.add(new TrendingTravelModel(R.drawable.cover_1_,"298.1k"));
         list.add(new TrendingTravelModel(R.drawable.cover_1_,"67.5k"));
@@ -46,7 +45,6 @@ public class VideoTabFragment extends Fragment {
         binding.rvVtab.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false));
         binding.rvVtab.setHasFixedSize(true);
         binding.rvVtab.setAdapter(trendingTravelAdapter);
-
 
         return binding.getRoot();
     }
