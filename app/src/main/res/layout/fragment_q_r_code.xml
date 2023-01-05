@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.search.QRCodeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:elevation="0.5dp"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="18dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginRight="17dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/icon__1"
+                android:id="@+id/btnBack"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:id="@+id/btnDownload"
+                android:src="@drawable/d_"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use your camera to scan the code below"
+        android:textSize="14sp"
+        android:textColor="#FF5B71"
+        android:layout_marginTop="24dp"
+        android:elegantTextHeight="true"
+        android:layout_marginHorizontal="116dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+    <ImageView
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:src="@drawable/qr_code"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="petlover"
+        android:textSize="24sp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="#2B323B"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+    <!--android:fontFamily="Inter"-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mauris vel, dignissim ullamcorper nullam aliquet et neque tortor"
+        android:textSize="14sp"
+        android:textColor="#6C7989"
+        android:fontFamily="@font/inter_regular"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginHorizontal="80dp"
+        />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint= "#FF5B71"
+        android:text="Scan"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textSize="14sp"
+        android:id="@+id/btnScan"
+        android:textColor="@color/white"
+        android:outlineSpotShadowColor="@color/red"
+        android:outlineAmbientShadowColor="@color/red"
+        android:outlineProvider="background"
+        android:textAllCaps="false"
+        android:fontFamily="@font/inter_medium"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="46dp"
+        app:cornerRadius="100dp"
+        android:elevation="5dp"
+        app:elevation="5dp"
+        android:paddingVertical="12dp"
+        android:drawableLeft="@drawable/scan_"
+        />
+
+
+</LinearLayout>

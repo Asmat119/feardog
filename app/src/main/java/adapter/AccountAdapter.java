@@ -8,10 +8,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.feardog.databinding.AccountBinding;
+import com.example.feardog.models.AccountModel;
+
 
 import java.util.ArrayList;
 
-import model.AccountModel;
 
 public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHolder> {
     AccountBinding binding;
@@ -21,17 +22,27 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHold
     }
     @NonNull
     @Override
-    public AccountAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = AccountBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new ViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AccountAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         AccountModel model = list.get(position);
         holder.binding.imAvatar.setImageResource(model.getImAvatar());
         holder.binding.tvName.setText(model.getTvName());
         holder.binding.tvAcc.setText(model.getTvAcc());
+        if(position==0){
+
+        }
+        if(position==1){
+            holder.binding.cvBorder.setStrokeWidth(0);
+        }
+        else {
+            holder.binding.tvLive.setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override

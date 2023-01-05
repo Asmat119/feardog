@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.chat.ChatFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:textSize="18sp"
+
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/send"
+                android:layout_marginRight="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        app:tabInlineLabel="true"
+        app:tabGravity="fill"
+
+         app:tabTextColor="@color/light_black"
+        app:tabMode="scrollable"
+        app:tabPadding="3dp"
+
+
+        app:tabBackground="@drawable/tab_backgroudn"
+        android:layout_margin="5dp"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabContentStart="@dimen/activity_horizontal_margin"
+        app:tabPaddingTop="14dp"
+        app:tabPaddingBottom="14dp"
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        app:tabPaddingStart="16dp"
+        app:tabPaddingEnd="16dp"
+        app:tabIconTint="@color/tab_icon_color"
+        app:tabIndicatorHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </com.google.android.material.tabs.TabLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        />
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"/>
+</LinearLayout>

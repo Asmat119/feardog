@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="16dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:layout_width="wrap_content"
+        android:paddingVertical="12dp"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_marginTop="16dp">
+
+        android:gravity="center_vertical">
         <com.google.android.material.card.MaterialCardView
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -23,14 +24,26 @@
                 android:background="@drawable/playback"
                 android:id="@+id/ivBk"
                 android:layout_height="wrap_content">
-                <ImageView
+
+
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    app:cardBackgroundColor="#29FFFFFF"
+                    app:cardCornerRadius="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="24dp">
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/play"
-                    android:layout_margin="18dp"
-                    />
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/play_" />
             </RelativeLayout>
 
         </com.google.android.material.card.MaterialCardView>
@@ -40,6 +53,7 @@
             android:text="Travel Time"
             android:layout_toRightOf="@id/cvSound"
             android:id="@+id/tvSound"
+            android:fontFamily="@font/inter_semibold"
             android:layout_marginStart="16dp"
             android:textSize="15sp"
             android:textColor="#2B323B"/>
@@ -50,7 +64,7 @@
             android:layout_marginStart="16dp"
             android:layout_below="@id/tvSound"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="2dp"
             android:text="Vivamus Lectus"
             android:textSize="15sp"
             android:textColor="#A4ADB7"/>
@@ -60,7 +74,8 @@
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/union_r"
             android:layout_centerVertical="true"
-            android:drawablePadding="22dp"
+            android:layout_marginRight="8dp"
+            android:drawablePadding="12dp"
             android:text="24.6 M"
             android:layout_alignParentRight="true"
             android:backgroundTint="@android:color/transparent"

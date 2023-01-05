@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="43dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="8dp"
-    android:layout_gravity="center_horizontal"
+    android:layout_marginHorizontal="12dp"
     android:gravity="center_horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
@@ -12,12 +11,12 @@
         android:gravity="center"
         android:layout_height="wrap_content">
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="42dp"
+            android:layout_width="48dp"
             app:cardCornerRadius="100dp"
             android:elevation="0dp"
             app:cardElevation="0dp"
             android:backgroundTint="#F3F5F6"
-            android:layout_height="42dp">
+            android:layout_height="48dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,6 +33,10 @@
             android:gravity="center"
             android:layout_marginTop="6dp"
             android:textColor="#6C7989"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:fontFamily="@font/inter_medium"
+
             android:id="@+id/ivText"
             android:textSize="12sp"
             />

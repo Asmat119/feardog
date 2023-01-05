@@ -13,6 +13,6 @@
 
     </stroke>
 
-    <solid android:color="@color/white" android:state_selected="false"/>
+    <solid android:color="@color/light_white" android:state_selected="false"/>
 
 </shape>

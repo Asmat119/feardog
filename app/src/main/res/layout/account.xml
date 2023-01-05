@@ -1,37 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="128dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_marginHorizontal="10dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="4dp"
+    android:layout_marginHorizontal="4dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:elevation="0dp"
-            android:id="@+id/cvBorder"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="100dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="56dp"
+        app:cardCornerRadius="100dp"
+        android:id="@+id/cvBorder"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center"
+        android:elevation="0dp"
+        app:strokeWidth="2dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardMaxElevation="0dp"
+        app:strokeColor="@color/red"
+        android:layout_height="56dp">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="1dp"
+            android:id="@+id/imAvatar"
             android:layout_gravity="center"
-            app:cardElevation="0dp"
-            app:strokeColor="#FF5B71"
-            app:strokeWidth="2.3dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:padding="2dp"
-                android:id="@+id/imAvatar"
-                android:src="@drawable/ann" />
-        </com.google.android.material.card.MaterialCardView>
-        <TextView
+            android:src="@drawable/avatar_man"/>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/tvLive"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/curve">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="2dp"
+                android:text="Live"
+                android:maxLines="1"
+
+                android:textColor="@color/white"
+                android:textSize="9sp">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:text="Annette Black"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:textAlignment="center"
             android:id="@+id/tvName"
+            android:fontFamily="@font/inter_semibold"
             android:textSize="14sp"
             android:layout_gravity="center"
             android:layout_marginTop="4dp"
@@ -40,24 +80,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
             android:text="unstylishhelper"
             android:textColor="#6C7989"
             android:id="@+id/tvAcc"
             android:layout_gravity="center"
             android:textSize="12sp"/>
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="18dp"
             android:minHeight="0dp"
             android:minWidth="0dp"
-            android:paddingVertical="7dp"
+            android:elevation="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:id="@+id/btnFollow"
+            app:elevation="0dp"
             android:text="Follow"
             app:cornerRadius="100dp"
             android:textSize="13sp"
             android:layout_marginTop="8dp"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:textAllCaps="false"
             android:backgroundTint="#FF5B71"
             android:textColor="@color/white"
             />
+
+
+    </LinearLayout>
+
     </LinearLayout>
