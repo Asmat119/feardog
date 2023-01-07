@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/livestoryback">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/overay"
+        android:layout_marginHorizontal="30dp"
+        >
+        <ImageButton
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/cross2"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/music"
+            android:layout_marginLeft="133dp"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sounds"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="vertical"
+        android:layout_marginTop="76dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="68dp"
+            android:layout_height="408dp"
+            android:layout_marginLeft="346dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#52141B52"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26.25dp"
+                android:layout_marginTop="20.25dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/flip" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="52dp"
+                android:text="Flip"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26.25dp"
+                android:layout_marginTop="84.25dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/speed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="116dp"
+                android:text="Speed"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="151dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/beauty" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="180dp"
+                android:text="Beauty"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25.03dp"
+                android:layout_marginTop="213.85dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/color_filter" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="244dp"
+                android:text="Filters"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26.25dp"
+                android:layout_marginTop="278.25dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/timer" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="308dp"
+                android:text="Timer"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26.25dp"
+                android:layout_marginTop="278.25dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/timer" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="244dp"
+                android:text="Filters"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="342dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/flash" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="372dp"
+                android:text="Flash"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="46dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="56dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#29FFFFFF"
+            android:layout_height="56dp">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/effect" />
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effects"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="76dp"
+            app:cardCornerRadius="100dp"
+            app:cardBackgroundColor="#80FF5B71"
+            android:layout_marginHorizontal="54dp"
+            android:layout_height="76dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="64dp"
+                app:cardCornerRadius="100dp"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="@color/red"
+                android:layout_height="64dp">
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="56dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#29FFFFFF"
+            android:layout_height="56dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/update" />
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live"
+            android:textSize="15sp"
+            android:textColor="#8FFFFFFF"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="12dp"
+
+            app:tint="#52FFFFFF" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Story"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
